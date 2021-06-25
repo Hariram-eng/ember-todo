@@ -1,0 +1,19 @@
+
+
+<main class="container">
+   <h5 class="allClear" {{on "click"  this.allClear}}>Clear All</h5>
+   <h1>TODO App</h1>
+   <form onsubmit={{fn this.submit}}>
+      <input placeholder='Add todo' class="input" type='text' value={{this.text.todo}} />
+      <button class="button">Add</button>
+   </form>
+   <ul>
+      {{#each this.activeTask as |item|}}        
+      <LinkTo @route='secondarytask' @model={{item.task_title}} value={{item.id}} class="links">
+         <li>{{item.task_title}}</li>
+      </LinkTo>
+      <button onclick={{fn  this.deleteRecord item.id}} value={{item.id}} class="deleteButton">Delete</button>
+      {{/each}}
+   </ul>
+</main>
+

@@ -1,0 +1,70 @@
+body{
+    background-color: #ebebeb;
+    font-family: sans-serif;
+}
+.links{
+    text-decoration: none;
+}
+.container{
+    height: 66vh;
+    width: 30%;   
+    margin-left: 25%;
+    margin-top: 11vh;
+    padding-left: 20%;
+    padding-top: 2%;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+}
+.container>h1{
+    color: red;
+}
+
+.input{
+    width: 26%;
+    height: 3vh;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    padding-left: 2%;
+    outline: none;
+}
+
+.button{
+    width: 10%;
+    height: 3vh;
+    cursor: pointer;
+}
+
+
+ul{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.home{
+    position: fixed;
+    right: 28%;
+    top: 14%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.allClear{
+    font-size: 18px;
+    position:fixed;
+    right: 27.5%;
+    top: 18%;
+    cursor: pointer;
+}
+.deleteButton{
+    position: relative;
+    left: 40%;
+    top: -33px;
+    outline: none;
+    height: 3.5vh;
+    width: 13%;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

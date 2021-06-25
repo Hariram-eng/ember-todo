@@ -1,0 +1,38 @@
+
+
+<main class="container">
+   <Home @model={{this.model}}/>
+   <h1>Individual Task</h1>
+   <h1>{{this.model.task_title}}</h1>
+   <form onsubmit={{fn this.submit @model}}>   
+   <input placeholder='Add sub todo' class="input" type='text' value={{this.text.todo}}/>
+   <button>Add</button>
+   </form> 
+   <ul>
+      {{#each this.model.children_tasks as |lists|}}
+      {{#if lists.isChecked}}
+      <input type="checkbox"  value={{lists.id}} onChange={{fn this.check }} checked/>  {{lists.sub_task}}
+      {{else}}
+      <input type="checkbox"  value={{lists.id}} onChange={{fn this.check }} />  {{lists.sub_task}}
+      {{/if}}
+      <br>
+      {{/each}}
+   </ul>
+   <h3>Finished</h3>
+   <ul>
+      {{#each this.model.children_tasks as |lists|}} 
+      {{#if lists.isChecked}}               
+      <li>{{lists.sub_task}}</li>
+      {{/if}}
+      {{/each}}
+   </ul>
+   <h3>Pending</h3>
+   <ul>
+      {{#each this.model.children_tasks as |lists|}} 
+      {{#unless lists.isChecked}}
+      <li>{{lists.sub_task}}</li>
+      {{/unless}}
+      {{/each}}
+   </ul>
+</main>
+
